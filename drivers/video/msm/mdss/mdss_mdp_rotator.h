@@ -46,7 +46,6 @@ struct mdss_mdp_rotator_session {
 	struct mdss_mdp_data dst_buf;
 
 	bool use_sync_pt;
-	bool fence_release;
 	struct list_head head;
 	struct list_head list;
 	struct mdss_mdp_rotator_session *next;

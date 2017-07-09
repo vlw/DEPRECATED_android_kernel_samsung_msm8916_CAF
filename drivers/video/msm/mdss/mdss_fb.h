@@ -239,14 +239,13 @@ struct msm_fb_data_type {
 	int ext_ad_ctrl;
 	u32 ext_bl_ctrl;
 	u32 calib_mode;
-	u32 calib_mode_bl;
 	u32 ad_bl_level;
 	u32 bl_level;
 	u32 bl_scale;
 	u32 bl_min_lvl;
 	u32 unset_bl_level;
-	bool allow_bl_update;
-	u32 bl_level_scaled;
+	u32 bl_updated;
+	u32 bl_level_old;
 	struct mutex bl_lock;
 
 	struct platform_device *pdev;
@@ -371,4 +370,9 @@ int mdss_fb_do_ioctl(struct fb_info *info, unsigned int cmd,
 		     unsigned long arg);
 int mdss_fb_compat_ioctl(struct fb_info *info, unsigned int cmd,
 			 unsigned long arg);
+#if defined(CONFIG_FB_MSM_MDSS_SAMSUNG)
+extern u8 csc_update;
+extern u8 csc_change;
+void mdss_samsung_update_brightness_value(void);
+#endif
 #endif /* MDSS_FB_H */
