@@ -20,6 +20,10 @@ source "drivers/block/Kconfig"
 
 source "drivers/misc/Kconfig"
 
+source "drivers/muic/Kconfig"
+
+source "drivers/muic/universal/Kconfig"
+
 source "drivers/ide/Kconfig"
 
 source "drivers/scsi/Kconfig"
@@ -148,6 +152,8 @@ source "drivers/hwspinlock/Kconfig"
 
 source "drivers/clocksource/Kconfig"
 
+source "drivers/motor/Kconfig"
+
 source "drivers/mailbox/Kconfig"
 
 source "drivers/iommu/Kconfig"
@@ -181,6 +187,8 @@ source "drivers/reset/Kconfig"
 source "drivers/coresight/Kconfig"
 
 source "drivers/bif/Kconfig"
+
+source "drivers/battery/Kconfig"
 
 source "drivers/sensors/Kconfig"
 

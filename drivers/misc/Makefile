@@ -78,3 +78,4 @@ obj-y				+= qcom/
 obj-$(CONFIG_UID_CPUTIME) 	+= uid_cputime.o
 obj-$(CONFIG_CHECK_SIMSLOT_COUNT) += sim_slot.o
 obj-$(CONFIG_DM_VERITY) += dmverity_query.o
+obj-$(CONFIG_SENSORS_BHI)       += bhy/
